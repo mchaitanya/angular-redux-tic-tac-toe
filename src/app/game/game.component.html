@@ -1,0 +1,11 @@
+<header class="game">
+  <h1 class="game__title">Tic Tac Toe</h1>
+  <button class="game__reset" type="button" (click)="onReset()">Reset</button>
+  <div class="game__status">{{ status$|async }}</div>
+</header>
+
+<div class="grid">
+  <div class="grid__square" *ngFor="let sq of grid$|async; let i=index" (click)="onMove(sq, i)">
+    {{ sq }}
+  </div>
+</div>

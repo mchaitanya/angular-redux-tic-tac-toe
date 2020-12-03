@@ -1,0 +1,36 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .game__title {
+    margin-bottom: 0.2rem;
+  }
+
+  .game__status {
+    margin: 2rem 0;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    vertical-align: middle;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 4rem);
+  grid-auto-rows: 4rem;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* http://book.mixu.net/css/5-tricks.html#techniques-for-horizontal-and-vertical-centering-in-css */
+.grid__square {
+  text-align: center;
+  line-height: 4rem;
+  vertical-align: middle;
+}
+
+.grid__square:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
